@@ -10,6 +10,20 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+            begin: Alignment.center,
+            end: Alignment.topLeft,
+            colors: [Colors.blue, Colors.red],
+          )
+          ),
+        ),
+      ),
+      body: Text("data"),
+    );
   }
 }
