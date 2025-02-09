@@ -21,9 +21,24 @@ class _HomepageState extends State<Homepage> {
             colors: [Colors.orange, Colors.red],
           )
           ),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            title: Text("To-Do List" , style: TextStyle(color:Colors.white,fontWeight: FontWeight.bold)),
+            centerTitle: true,
+          ),
         ),
       ),
-      body: Text("data"),
+      body:Column(
+        children: [
+
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.orangeAccent,
+        
+      ),
     );
   }
 }
