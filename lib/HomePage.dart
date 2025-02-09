@@ -90,13 +90,13 @@ class _HomepageState extends State<Homepage> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text("cancel"),
+              child: Text("Cancel",style: TextStyle(color: Colors.red),),
             ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text("add"),
+              child: Text("Add",style: TextStyle(color: Colors.green),),
             ),
           ],
         );
