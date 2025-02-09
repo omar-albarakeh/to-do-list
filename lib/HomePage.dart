@@ -54,7 +54,7 @@ class _HomepageState extends State<Homepage> {
         shape: CircleBorder(),
         elevation: 4,
         child: InkWell(
-          onTap: () {},
+          onTap: _showDialog,
           child: Container(
             width: 56,
             height: 56,
@@ -75,4 +75,32 @@ class _HomepageState extends State<Homepage> {
       ),
     );
   }
-}
+
+  Future<void> _showDialog() async {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Add Missions"),
+          content: TextField(
+
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("cancel"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text("add"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  }
